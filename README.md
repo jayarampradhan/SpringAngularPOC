@@ -13,3 +13,11 @@ Run As Java Application:
 
 Navigate to : <a href="http://127.0.0.1:8181/uim/springAngular">Local Host</a>
 
+
+**Technology Stack**
+====================
+- jdk 1.8
+- Spring 4.14
+- Spring Boot 1.2.1
+- Angular
+- Thymleaf
