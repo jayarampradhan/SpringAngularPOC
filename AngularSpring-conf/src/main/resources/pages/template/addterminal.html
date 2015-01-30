@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{http://static.uimirror.com/reach/favicon.ico}" />
+    <title th:text="${user.firstName}">There -Promo- Dash Board</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Reach Application for running promo"/>
+    <meta name="author" content="UIMirror"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body>
+	<div th:fragment="terminal">
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Terminal name</label> <input
+					type="text" class="form-control" id="exampleInputEmail1"
+					placeholder="Enter Terminal name" ng-model="name" />
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Terminal Location</label> <select
+					ng-model="loc" ng-options="item.name as item.name for item in locs">
+				</select>
+			</div>
+			<button type="submit" class="btn btn-default"
+				ng-click="addTerminal()">Submit</button>
+		</form>
+	</div>
+
+	<div th:fragment="terminalGroup">
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Group name</label> <input
+					type="text" class="form-control" id="exampleInputEmail1"
+					placeholder="Enter Group Name" ng-model="name" />
+			</div>
+			<button type="submit" class="btn btn-default"
+				ng-click="addTerminalGroup()">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
